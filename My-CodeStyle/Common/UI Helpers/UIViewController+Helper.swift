@@ -25,4 +25,10 @@ import SnapKit
         view.removeFromSuperview()
         removeFromParent()
     }
+    
+    // MARK: - Presenters
+    func presentFull(viewControllerToPresent vc: UIViewController, animated: Bool, completion: (() -> Void)?) {
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: animated, completion: completion)
+    }
 }

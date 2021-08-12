@@ -63,7 +63,7 @@ class BaseController: UIViewController {
     
     func setupTopBar(hideBackButton: Bool = false, title: String) {
         topBarView.configure(title: title, hideBackButton: hideBackButton) {
-            self.dismiss(animated: true, completion: nil)
+            self.backPressed()
         }
     
         
@@ -77,5 +77,17 @@ class BaseController: UIViewController {
         spacer.backgroundColor = .clear
         container?.insertArrangedSubview(spacer, at: 0)
         spacer.snp.makeConstraints({ $0.height.equalTo(66) })
+    }
+    
+    func backPressed() {
+        if isModalDismissed {
+            dismiss(animated: true, completion: nil)
+        } else {
+            if let nc = navigationController {
+                nc.popViewController(animated: true)
+            } else {
+                dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }

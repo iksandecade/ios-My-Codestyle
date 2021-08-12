@@ -11,7 +11,9 @@ class MainViewController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+    }
+    @IBAction func nextTapped(_ sender: Any) {
+        RouteManager(self).goto(.Full)
     }
 }
