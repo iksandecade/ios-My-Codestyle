@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="My_CodeStyle" customModuleProvider="target">
             <connections>
+                <outlet property="container" destination="REY-9O-ayq" id="7jd-Vf-XQO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,18 +19,42 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyr-w7-f2t">
-                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="REY-9O-ayq">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QD2-Ej-GKI" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, this is template codestyle by iksandecade. Feel free to use :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9G-Fh-0w5">
+                                    <rect key="frame" x="20" y="391" width="374" height="36"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20c-Aw-m5P">
+                                    <rect key="frame" x="171.5" y="716" width="71" height="30"/>
+                                    <state key="normal" title="Next Page"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="w9G-Fh-0w5" firstAttribute="centerY" secondItem="QD2-Ej-GKI" secondAttribute="centerY" id="3xX-HJ-o9K"/>
+                                <constraint firstAttribute="trailing" secondItem="w9G-Fh-0w5" secondAttribute="trailing" constant="20" id="88B-Y3-ikO"/>
+                                <constraint firstAttribute="bottom" secondItem="20c-Aw-m5P" secondAttribute="bottom" constant="72" id="Djb-AG-2nx"/>
+                                <constraint firstItem="20c-Aw-m5P" firstAttribute="centerX" secondItem="QD2-Ej-GKI" secondAttribute="centerX" id="LgN-LJ-ccW"/>
+                                <constraint firstItem="w9G-Fh-0w5" firstAttribute="leading" secondItem="QD2-Ej-GKI" secondAttribute="leading" constant="20" id="ZuX-6h-qVq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Qyr-w7-f2t" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="NHp-dO-tNq"/>
-                <constraint firstItem="Qyr-w7-f2t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yrc-3p-ngo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="REY-9O-ayq" secondAttribute="bottom" id="Qs5-V3-KJA"/>
+                <constraint firstItem="REY-9O-ayq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bzn-G3-px5"/>
+                <constraint firstItem="REY-9O-ayq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ixe-2I-YaR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="REY-9O-ayq" secondAttribute="trailing" id="tIK-NE-svN"/>
             </constraints>
             <point key="canvasLocation" x="139" y="134"/>
         </view>
